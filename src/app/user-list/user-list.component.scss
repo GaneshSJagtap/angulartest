@@ -1,0 +1,15 @@
+@import "../../styles.scss";
+.container {
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: none !important;
+  .mat-icon {
+    color: #171819 !important;
+    &:hover {
+      color: #48c6f3 !important;
+    }
+  }
+}
+body .mat-form-field.mat-focused .mat-form-field-ripple.mat-accent {
+  background: #48c6f3 !important;
+}

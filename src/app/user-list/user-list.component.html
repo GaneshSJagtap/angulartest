@@ -1,0 +1,123 @@
+<div class="container ">
+  <div class="form">
+    <mat-form-field floatPlaceholder="never" color="accent">
+      <input matInput #filter placeholder="Filter users" />
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
+    ng update @angular/cli @angular/core
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
+    </ng-container>
+
+    <!-- First Name Column -->
+    <ng-container matColumnDef="fName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >First Name</mat-header-cell
+      >
+      <mat-cell *matCellDef="let row"> {{ row.fName }}</mat-cell>
+    </ng-container>
+
+    <!-- Last Name Column -->
+    <ng-container matColumnDef="lName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Last Name</mat-header-cell
+      >
+      <mat-cell *matCellDef="let row"> {{ row.lName }}</mat-cell>
+    </ng-container>
+
+    <!-- User Name Column -->
+    <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >User Name</mat-header-cell
+      >
+      <mat-cell *matCellDef="let row"> {{ row.userName }}</mat-cell>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>City</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.city }}</mat-cell>
+    </ng-container>
+
+    <!-- Department Column -->
+    <ng-container matColumnDef="department">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Department</mat-header-cell
+      >
+      <mat-cell *matCellDef="let row"> {{ row.department }}</mat-cell>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="primary" (click)="addNew()">
+          <mat-icon aria-label="Example icon-button with a heart icon"
+            >add
+          </mat-icon>
+        </button>
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let row; let i = index">
+        <button
+          mat-icon-button
+          color="accent"
+          (click)="
+            startEdit(
+              i,
+              row.id,
+              row.fName,
+              row.lName,
+              row.userName,
+              row.city,
+              row.department
+            )
+          "
+        >
+          <mat-icon aria-label="Edit">edit</mat-icon>
+        </button>
+
+        <button
+          mat-icon-button
+          color="accent"
+          (click)="
+            deleteItem(
+              i,
+              row.id,
+              row.fName,
+              row.lName,
+              row.userName,
+              row.city,
+              row.department
+            )
+          "
+        >
+          <mat-icon aria-label="Delete">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+
+  <div
+    class="no-results"
+    [style.display]="dataSource.renderedData.length == 0 ? '' : 'none'"
+  >
+    No results
+  </div>
+
+  <mat-paginator
+    #paginator
+    [length]="dataSource.filteredData.length"
+    [pageIndex]="0"
+    [pageSize]="5"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator>
+</div>

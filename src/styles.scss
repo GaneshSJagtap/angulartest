@@ -1,0 +1,194 @@
+@import "~@angular/material/theming";
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+
+@include mat-core();
+
+$primary: mat-palette($mat-indigo, 500);
+$accent: mat-palette($mat-pink, 500, A200, A400);
+$warn: mat-palette($mat-red, 500);
+
+$config: mat-typography-config();
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+@font-face {
+  font-family: "open_sansbold";
+  src: url("/assets/fonts/opensans-bold-webfont.eot");
+  src: url("/assets/fonts/opensans-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("/assets/fonts/opensans-bold-webfont.woff") format("woff"),
+    url("/assets/fonts/opensans-bold-webfont.ttf") format("truetype"),
+    url("/assets/fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sanslight";
+  src: url("/assets/fonts/opensans-light-webfont.eot");
+  src: url("/assets/fonts/opensans-light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/opensans-light-webfont.woff2") format("woff2"),
+    url("/assets/fonts/opensans-light-webfont.woff") format("woff"),
+    url("/assets/fonts/opensans-light-webfont.ttf") format("truetype"),
+    url("/assets/fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("/assets/fonts/opensans-regular-webfont.eot");
+  src: url("/assets/fonts/opensans-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("/assets/fonts/opensans-regular-webfont.woff") format("woff"),
+    url("/assets/fonts/opensans-regular-webfont.ttf") format("truetype"),
+    url("/assets/fonts/opensans-regular-webfont.svg#open_sansregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sanssemibold";
+  src: url("/assets/fonts/opensans-semibold-webfont.eot");
+  src: url("/assets/fonts/opensans-semibold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/opensans-semibold-webfont.woff2") format("woff2"),
+    url("/assets/fonts/opensans-semibold-webfont.woff") format("woff"),
+    url("/assets/fonts/opensans-semibold-webfont.ttf") format("truetype"),
+    url("/assets/fonts/opensans-semibold-webfont.svg#open_sanssemibold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$flex: flex;
+$wrap: wrap;
+$center: center;
+$spaceBetween: space-between;
+$spaceAround: space-around;
+$spaceEvenly: space-evenly;
+$column: column;
+$row: row;
+$openSansRegular: "open_sansregular";
+$openSansLight: "open_sanslight";
+$openSansBold: "open_sansbold";
+$openSansSemiBold: "open_sanssemibold";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  .wrapper {
+    min-height: 100%;
+    .innerWrapper {
+      padding-bottom: 50px;
+      header {
+        .container {
+          padding: 0;
+        }
+      }
+      .container {
+        padding: 50px 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: $openSansBold;
+      }
+      p {
+        font-family: $openSansRegular;
+      }
+    }
+  }
+  .footer {
+    height: 50px;
+    margin-top: -50px;
+  }
+  position: relative;
+  .cdk-overlay-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.d-flex {
+  display: $flex;
+}
+.wrap {
+  flex-wrap: $wrap;
+}
+.justifyContentCenter {
+  justify-content: $center;
+}
+.alignItemsCenter {
+  align-items: $center;
+}
+.justifyFlexEnd {
+  justify-content: flex-end;
+}
+.spaceBetween {
+  justify-content: $spaceBetween;
+}
+.spaceAround {
+  justify-content: $spaceAround;
+}
+.spaceEvenly {
+  justify-content: $spaceEvenly;
+}
+.column {
+  flex-direction: $column;
+}
+.row {
+  flex-direction: $row;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-dialog-container {
+  background: #fff !important;
+  color: #171819 !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #171819 !important;
+}
+.mat-form-field {
+  width: 100% !important;
+}
+.mat-form-field-flex {
+  border-bottom: 1px solid #171819 !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,29 @@
+<section class="wrapper">
+  <section class="innerWrapper">
+    <header>
+      <section class="container">
+        <div class="d-flex spaceBetween alignItemsCenter">
+          <div class="logo">
+            <a routerLink="/"
+              ><img src="./assets/images/exela.png" alt="Exela Test"
+            /></a>
+          </div>
+          <div class="nav">
+            <ul class="d-flex spaceBetween">
+              <li routerLink="how-it-works" routerLinkActive="active-link">
+                How it works?
+              </li>
+              <li routerLink="user-list" routerLinkActive="active-link">
+                User List
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+    <router-outlet></router-outlet>
+  </section>
+</section>
+<footer class="footer">
+  <p class="date">© {{ date }} Exela Technologies, Inc. All rights reserved</p>
+</footer>

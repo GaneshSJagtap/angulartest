@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "fName": "Ganesh",
+    "lName": "Jagtap",
+    "userName": "JagtapG",
+    "city": "Pune",
+    "department": "Information Technology"
+  },
+  {
+    "id": 2,
+    "fName": "Suraj",
+    "lName": "Oswal",
+    "userName": "sOswal",
+    "city": "Mumbai",
+    "department": "Marketing"
+  },
+  {
+    "id": 3,
+    "fName": "Rahul",
+    "lName": "Satpute",
+    "userName": "rSatpute",
+    "city": "Pune",
+    "department": "Testing"
+  },
+  {
+    "id": 4,
+    "fName": "Sonal",
+    "lName": "Chavan",
+    "userName": "sChavan",
+    "city": "Nashik",
+    "department": "Business Analytics"
+  },
+  {
+    "id": 5,
+    "fName": "Swapnil",
+    "lName": "Bule",
+    "userName": "sBule",
+    "city": "Pune",
+    "department": "Designer"
+  },
+  {
+    "id": 6,
+    "fName": "Vitthal",
+    "lName": "Pawar",
+    "userName": "vPawar",
+    "city": "Pune",
+    "department": "Developer"
+  }
+]
